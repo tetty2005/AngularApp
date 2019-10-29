@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, Input, OnInit} from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import { Card } from '../card';
 
 @Component({
@@ -8,17 +8,18 @@ import { Card } from '../card';
 })
 export class CardComponent implements OnInit, AfterViewInit {
   @Input() card: Card;
+  public text = 'Where is a car?';
 
   constructor() { }
 
   ngOnInit() { }
 
-  ngAfterViewInit() {
-  }
+  ngAfterViewInit() { }
 
   onClick() {
     console.log('card:', this.card.isWinning);
     this.card.isSelected = true;
+    this.text = 'It`s your first chose!';
   }
 
 }

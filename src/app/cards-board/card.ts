@@ -1,9 +1,10 @@
 export class Card {
-  public isWinning: boolean;
-  public isSelected: boolean;
+  public isSelected = false;
+  public isLeftGame = false;
+  public isVisible = false;
 
-  constructor(isWinning: boolean, isSelected: boolean) {
-    this.isSelected = isSelected;
-    this.isWinning = isWinning;
-  }
+  constructor(
+    public isWinning: boolean,
+    public id: number
+  ) { }
 }

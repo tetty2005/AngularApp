@@ -4,12 +4,22 @@
   height: 150px;
   width: 150px;
   background-color: grey;
-}
+  cursor: pointer;
 
-.winning {
-  background-color: hotpink;
-}
+  &.winning {
+    background-color: hotpink;
+  }
 
-.simple {
-  background-color: yellow;
+  &.non-winning {
+    background-color: yellow;
+  }
+
+  &.removed {
+    background-color: lightgrey;
+    pointer-events: none;
+  }
+
+  &.selected {
+    background-color: lightgoldenrodyellow;
+  }
 }

@@ -1,5 +1,11 @@
 <div class="card"
      (click)="onClick()"
-     [ngClass]="{ winning: card.isSelected && card.isWinning, simple: card.isSelected && !card.isWinning }">
-  <span *ngIf="card.isSelected">{{card.isWinning ? 'You are win!' : 'You lost :('}}</span>
+     [ngClass]="{
+          winning: card.isVisible && card.isWinning,
+          'non-winning': card.isVisible && !card.isWinning,
+          visible: card.isVisible,
+          selected: card.isSelected,
+          removed: card.isLeftGame
+     }">
+  <span>{{card.isLeftGame ? 'No car here!' : text}}</span>
 </div>
